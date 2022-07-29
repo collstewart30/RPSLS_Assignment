@@ -1,7 +1,5 @@
 from game import Game
-from ai import AI
-from human import Human
-from player import Player
+
 
 game_one = Game()
 game_one.display_welcome()
