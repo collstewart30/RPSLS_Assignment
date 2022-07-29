@@ -10,16 +10,6 @@ prompts them if they enter something incorrectly
 
 
 
-Classes:
-- Game
-    - welcome, game rules, list of gestures, run_game
-
-Player(Parent)
-- Human
-    - single or multiplayer choice input
-- AI (random gesture)
-    - single or mulitplayer choice input
-
 
 Before you begin coding, write an algorithm that represents the steps necessary to play a game of rock, paper, scissors, lizard, Spock in a best-of-three format. By writing out the steps, it will make you think about every piece needed to bring the game to life. Please submit to your instructor Slack channel once completed for approval to start
 
