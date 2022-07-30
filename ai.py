@@ -8,10 +8,10 @@ class AI(Player):
         
 
     def set_name(self):
-        user_choice = input('Please enter an AI name: ')
-        self.name = user_choice
+        ai_name_choice = input('Please enter an AI name: ')
+        self.name = ai_name_choice
 
 
     def choose_gesture(self):
-        self.chosen_gesture = random.choice(self.gestures)
+        self.chosen_gesture = random.choice(self.gesture_list)
         print(f'AI {self.name} choice: {self.chosen_gesture}')

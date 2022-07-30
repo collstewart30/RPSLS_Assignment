@@ -8,16 +8,16 @@ class Human(Player):
         
 
     def set_name(self):
-        user_choice = input('Please enter a Human name: ')
-        self.name = user_choice
+        human_name_choice = input('Please enter a name for this player: ')
+        self.name = human_name_choice
 
 
     def choose_gesture(self):
 
-        print(f'What is your gesture of choice?')
-        for gestures in gestures:
-            print(f'For {gestures} press {self.gestures.index(gestures) + 1}')
+        for gesture in self.gestures_list:
+            print(f'For {gesture} press {self.gesture_list.index(gesture) + 1}')
 
+        print(f'What is your gesture of choice?')
         user_choice = int(input('Enter your choice: '))
 
         while user_choice > (len(self.gestures) - 1):

@@ -31,8 +31,9 @@ class Game:
     def run_game(self):
         #self.display_welcome()
         self.choose_game_mode()
-        self.choose_gesture()
-        self.game_parameters()
+        self.gesture_options()
+        self.choose_game_gesture()
+        self.game_logic()
 
     def display_welcome(self):
         print("")
@@ -41,6 +42,8 @@ class Game:
         print("")
         print('GAME RULES:\nChoose # of players\nChoose gesture option\nWinner is best 2/3')
         print("")
+    
+    def gesture_options(self):
         print('Gesture options are:')
         print("")
         time.sleep(1)
@@ -53,31 +56,30 @@ class Game:
 
 
     def choose_game_mode(self):
-        self.user_choice = input('Single or mulitplayer? ')
+        self.game_mode = ''
+        game_mode_confirmed = False
+        while game_mode_confirmed == False:
+            self.game_mode = input('Choose 1 for player. Choose 2 for mulitplayer. Make your choice now: ')
+            if self.game_mode == "1":
+                self.player_one.set_name()
+                self.player_two.set_name()
+                game_mode_confirmed = True
+            elif self.game_mode == '2':
+                self.player_one.set_name()
+                self.player_two.set_name()
+                game_mode_confirmed = True
+            else:
+                print("I didn't get that.")
+                game_mode_confirmed = False
 
-        if self.user_choice == "Single":
-            self.player_one = Human.set_name(self)
-            self.player_two = AI.set_name(self)
-        elif self.user_choice == 'Multiplayer':
-            self.player_one = Human.set_name(self)
-            self.player_two = Human.set_name(self)
-        else:
-            print(input("I didn't get that. Single or multiplayer? "))
+
+    def choose_game_gesture(self):
+
+        self.player_one.choose_gesture()
+        self.player_two.choose_gesture()
 
 
-    def choose_gesture(self):
-        if self.user_choice == '1':
-            self.player_one.choose_gesture()
-            self.player_two.choose_gesture()
-        elif self.user_choice == '2':
-            self.player_one.choose_gesture(self)
-            self.player_two_gesture = Human.choose_gesture(self)
-        elif self.user_choice == '3':
-            self.player_one_gesture = AI.choose_gesture(self)
-            self.player_two_gesture = AI.choose_gesture(self)
-        
-
-    def game_parameters(self):
+    def game_logic(self):
         if self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Scissors':
             print('Rock crushes Scissors')
             self.player_one.score += 1
