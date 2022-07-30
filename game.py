@@ -32,6 +32,7 @@ class Game:
         #self.display_welcome()
         self.choose_game_mode()
         self.choose_gesture()
+        self.game_parameters()
 
     def display_welcome(self):
         print("")
@@ -52,17 +53,17 @@ class Game:
 
 
     def choose_game_mode(self):
-        self.user_choice = input('How many players? 1, 2, or 3? ')
+        self.user_choice = input('Single or mulitplayer? ')
 
-        if self.user_choice == "1":
+        if self.user_choice == "Single":
             self.player_one = Human.set_name(self)
             self.player_two = AI.set_name(self)
-        elif self.user_choice == '2':
+        elif self.user_choice == 'Multiplayer':
             self.player_one = Human.set_name(self)
             self.player_two = Human.set_name(self)
-        elif self.user_choice == '3':
-            self.player_one = AI.set_name(self)
-            self.player_two = AI.set_name(self)
+        else:
+            print(input("I didn't get that. Single or multiplayer? "))
+
 
     def choose_gesture(self):
         if self.user_choice == '1':
@@ -76,19 +77,62 @@ class Game:
             self.player_two_gesture = AI.choose_gesture(self)
         
 
+    def game_parameters(self):
+        if self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Scissors':
+            print('Rock crushes Scissors')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Paper':
+            print('Scissors cuts Paper')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Rock':
+            print('Paper covers Rock')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Rock' and self.player_two.chosen_gesture == 'Lizard':
+            print('Rock crushes Lizard')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Spock':
+            print('Lizard poisons Spock')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Scissors':
+            print('Spock smashes Scissors')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Scissors' and self.player_two.chosen_gesture == 'Lizard':
+            print('Scissors decapitates Lizard')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Lizard' and self.player_two.chosen_gesture == 'Paper':
+            print('Lizard eats Paper')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Paper' and self.player_two.chosen_gesture == 'Spock':
+            print('Paper disproves Spock')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        elif self.player_one.chosen_gesture == 'Spock' and self.player_two.chosen_gesture == 'Rock':
+            print('Spock vaporizes Rock')
+            self.player_one.score += 1
+            print('{self.player_one.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
+        else:
+            self.player_two.score += 1
+            print('{self.player_two.name} wins!')
+            print('Current sccore: {self.player_one.name}: {self.player_one.score}, {self.player_two.name}: {self.player_two.score}')
 
 
-
-
-# Rock crushes Scissors 
-# Scissors cuts Paper 
-# Paper covers Rock 
-# Rock crushes Lizard 
-# Lizard poisons Spock 
-# Spock smashes Scissors 
-# Scissors decapitates Lizard 
-# Lizard eats Paper
-# Paper disproves Spock 
-# Spock vaporizes Rock -->
 
 
