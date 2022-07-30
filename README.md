@@ -22,3 +22,15 @@ Before you begin coding, write an algorithm that represents the steps necessary 
 6. Winner displayed
 7. Best 2/3 - repeat until winner
 8. Option to play again
+
+
+# Rock crushes Scissors 
+# Scissors cuts Paper 
+# Paper covers Rock 
+# Rock crushes Lizard 
+# Lizard poisons Spock 
+# Spock smashes Scissors 
+# Scissors decapitates Lizard 
+# Lizard eats Paper
+# Paper disproves Spock 
+# Spock vaporizes Rock

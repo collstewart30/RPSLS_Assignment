@@ -9,17 +9,6 @@ import time
 from human import Human
 from ai import AI
 
-# <!-- Rock crushes Scissors 
-# Scissors cuts Paper 
-# Paper covers Rock 
-# Rock crushes Lizard 
-# Lizard poisons Spock 
-# Spock smashes Scissors 
-# Scissors decapitates Lizard 
-# Lizard eats Paper
-# Paper disproves Spock 
-# Spock vaporizes Rock -->
-
 
 class Game:
 
@@ -34,6 +23,7 @@ class Game:
         self.gesture_options()
         self.choose_game_gesture()
         self.game_logic()
+        self.play_again()
 
     def display_welcome(self):
         print("")
@@ -137,4 +127,10 @@ class Game:
 
 
 
+    def play_again(self):
+        play_again_choice = (input("Would you like to play again? Enter 'Y' or 'N'"))
 
+        if play_again_choice == 'Y':
+            self.run_game()
+        else:
+            pass
