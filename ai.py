@@ -1,5 +1,6 @@
 import random
 from player import Player
+import time
 
 class AI(Player):
 
@@ -14,4 +15,5 @@ class AI(Player):
 
     def choose_gesture(self):
         self.chosen_gesture = random.choice(self.gesture_list)
+        time.sleep(1)
         print(f"AI {self.name}'s choice: {self.chosen_gesture}")

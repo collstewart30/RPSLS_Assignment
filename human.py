@@ -15,7 +15,7 @@ class Human(Player):
 
 
     def choose_gesture(self):
-        time.sleep(2)
+        time.sleep(1)
         print(f'{self.name} choose your gesture from the list below:')
         for gesture in self.gesture_list:
             print(f'For {gesture} press {self.gesture_list.index(gesture) + 1}')

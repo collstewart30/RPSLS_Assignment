@@ -19,9 +19,10 @@ class Game:
 
     def run_game(self):
         self.display_welcome()
+        time.sleep(1)
         self.choose_game_mode()
         print("")
-        #self.gesture_options()
+        self.gesture_options()
         self.game_logic()
         self.display_winner()
         self.play_again()
@@ -31,7 +32,7 @@ class Game:
         print('Welcome to RPSLS! Only one will win! ')
         time.sleep(1)
         print("")
-        print('Choose # of players\nChoose gesture option\nWinner is best 2/3')
+        print('HOW TO PLAY: \nChoose # of players\nChoose gesture option\nWinner is best 2/3')
         print("")
     
     def gesture_options(self):
@@ -85,6 +86,7 @@ class Game:
 
     def choose_game_gesture(self):
         print("")
+        time.sleep(1)
         self.player_one.choose_gesture()
         self.player_two.choose_gesture()
         print("")
@@ -106,7 +108,7 @@ class Game:
                 print('Rock crushes Scissors')
                 self.player_one.score += 1
                 print("")
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}') 
@@ -117,7 +119,7 @@ class Game:
                 print('Rock crushes Scissors')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -130,7 +132,7 @@ class Game:
                 print('Scissors cuts Paper')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -140,7 +142,7 @@ class Game:
                 print("")
                 print('Scissors cuts Paper')
                 print("")
-                time.sleep(1)
+                time.sleep(2)
                 self.player_two.score += 1
                 print(f'{self.player_two.name} wins round!')
                 print("")
@@ -153,7 +155,7 @@ class Game:
                 print("")
                 print('Paper covers Rock')
                 print("")
-                time.sleep(1)
+                time.sleep(2)
                 self.player_one.score += 1
                 print(f'{self.player_one.name} wins round!')
                 print("")
@@ -164,7 +166,7 @@ class Game:
                 print("")
                 print('Paper covers Rock')
                 print("")
-                time.sleep(1)
+                time.sleep(2)
                 self.player_two.score += 1
                 print(f'{self.player_two.name} wins round!')
                 print("")
@@ -179,7 +181,7 @@ class Game:
                 print('Rock crushes Lizard')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -190,7 +192,7 @@ class Game:
                 print('Rock crushes Lizard')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -204,7 +206,7 @@ class Game:
                 print('Lizard poisons Spock')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -215,7 +217,7 @@ class Game:
                 print('Lizard poisons Spock')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -229,7 +231,7 @@ class Game:
                 print('Spock smashes Scissors')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -240,7 +242,7 @@ class Game:
                 print('Spock smashes Scissors')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -254,7 +256,7 @@ class Game:
                 print('Scissors decapitates Lizard')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -265,7 +267,7 @@ class Game:
                 print('Scissors decapitates Lizard')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -279,7 +281,7 @@ class Game:
                 print('Lizard eats Paper')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -290,7 +292,7 @@ class Game:
                 print('Lizard eats Paper')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -304,7 +306,7 @@ class Game:
                 print('Paper disproves Spock')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -315,7 +317,7 @@ class Game:
                 print('Paper disproves Spock')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -329,7 +331,7 @@ class Game:
                 print('Spock vaporizes Rock')
                 print("")
                 self.player_one.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_one.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
@@ -340,7 +342,7 @@ class Game:
                 print('Spock vaporizes Rock')
                 print("")
                 self.player_two.score += 1
-                time.sleep(1)
+                time.sleep(2)
                 print(f'{self.player_two.name} wins round!')
                 print("")
                 print(f'Current score: \n{self.player_one.name}: {self.player_one.score}\n{self.player_two.name}: {self.player_two.score}')
