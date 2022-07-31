@@ -8,7 +8,7 @@ class AI(Player):
         
 
     def set_name(self):
-        ai_name_choice = input('Please enter an AI name for this player: ')
+        ai_name_choice = input('Please enter an AI player name: ')
         self.name = ai_name_choice
 
 
