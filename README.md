@@ -24,6 +24,12 @@ Before you begin coding, write an algorithm that represents the steps necessary 
 8. Option to play again
 
 
+
+
+In video feedback, can I be shown how to write the game logic more efficiently instead of repeating everything and reversing just the player&gesture?
+
+
+
 # Rock crushes Scissors 
 # Scissors cuts Paper 
 # Paper covers Rock 
