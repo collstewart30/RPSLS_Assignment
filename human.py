@@ -17,10 +17,9 @@ class Human(Player):
         for gesture in self.gesture_list:
             print(f'For {gesture} press {self.gesture_list.index(gesture) + 1}')
 
-        print(f'What is your gesture of choice?')
-        user_choice = int(input('Enter your choice: '))
+        user_choice = int(input(f'Please enter your choice: '))
         self.chosen_gesture = self.gesture_list[user_choice -1]
-        print(f'{self.name} choice: {self.chosen_gesture}')
+        print(f"{self.name}'s choice: {self.chosen_gesture}")
 
 
         # while user_choice > (len(self.gestures) - 1):
