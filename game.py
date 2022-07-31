@@ -37,7 +37,6 @@ class Game:
     
     def gesture_options(self):
         print('GAME RULES:')
-        print("")
         time.sleep(1)
         print('Rock crushes Scissors')
         time.sleep(1)
