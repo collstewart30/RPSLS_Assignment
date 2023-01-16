@@ -32,7 +32,7 @@ class Game:
         print('Welcome to RPSLS! Only one will win! ')
         time.sleep(1)
         print("")
-        print('HOW TO PLAY: \nChoose # of players\nChoose gesture option\nWinner is best 2/3')
+        print('HOW TO PLAY: \nChoose # of players\nChoose gesture option\nWinner is first to 3 points!')
         print("")
     
     def gesture_options(self):
